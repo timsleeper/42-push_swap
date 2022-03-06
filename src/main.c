@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 22:44:39 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 17:18:56 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 18:27:41 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 	t_list	**stack_b;
 
 	if (argc < 2)
-		return (-1);
+		return (1);
 	validate_args(argv);
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	stack_b = (t_list **)malloc(sizeof(t_list));
@@ -53,6 +53,7 @@ int	main(int argc, char **argv)
 	if (sorting_ok(stack_a))
 	{
 		cleanup_stack(stack_b);
+		cleanup_stack(stack_a);
 		return (0);
 	}
 	sort(stack_a, stack_b);
