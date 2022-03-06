@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 12:40:55 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 14:14:37 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:07:52 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
-	ft_putstr("sa");
+	ft_putstr("sa\n");
 	return (0);
 }
 
@@ -46,7 +46,7 @@ int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);
-	ft_putstr("sb");
+	ft_putstr("sb\n");
 	return (0);
 }
 
@@ -56,6 +56,6 @@ int	ss(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);
-	ft_putstr("ss");
+	ft_putstr("ss\n");
 	return (0);
 }

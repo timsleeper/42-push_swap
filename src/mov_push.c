@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 12:51:50 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 14:14:23 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:07:24 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_a, stack_b) == -1)
 		return (-1);
-	ft_putstr("pa");
+	ft_putstr("pa\n");
 	return (0);
 }
 
@@ -51,6 +51,6 @@ int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_b, stack_a) == -1)
 		return (-1);
-	ft_putstr("pb");
+	ft_putstr("pb\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/06 14:44:19 by ftadeu-d          #+#    #+#              #
-#    Updated: 2022/03/06 15:37:53 by ftadeu-d         ###   ########.fr        #
+#    Updated: 2022/03/06 16:12:57 by ftadeu-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = src/main.c \
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 
 RM = rm -rf
 

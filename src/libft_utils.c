@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:12:31 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 16:01:39 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:06:37 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ void	ft_putstr(char *str)
 {
 	while (*str)
 	{
-		write(1, &str, sizeof(str));
+		write(1, str, 1);
 		str++;
 	}
-	write(1, "\n", sizeof(str));
 }

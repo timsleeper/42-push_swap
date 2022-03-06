@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:13:31 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 15:57:17 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:08:07 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ void	validate_args(char **argv)
 	{
 		tmp = ft_atoi(args[i]);
 		if (!is_num(args[i]))
-			print_error("Error");
+			print_error("Error\n");
 		if (is_repeated(tmp, args, i))
-			print_error("Error");
+			print_error("Error\n");
 		if (tmp < -2147483648 || tmp > 2147483647)
-			print_error("Error");
+			print_error("Error\n");
 		i++;
 	}		
 }

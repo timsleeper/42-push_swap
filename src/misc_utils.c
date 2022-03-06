@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:31:17 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 16:00:16 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:19:06 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ void	cleanup_stack(t_list **stack)
 	{
 		tmp = element;
 		element = element->next;
-		free(element);
+		free(tmp);
 	}
-	free(element);
+	free(stack);
 }
 
 void	cleanup(char **s)
