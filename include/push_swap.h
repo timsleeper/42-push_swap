@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 22:46:54 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 16:50:36 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 17:17:32 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int		ft_lstsize(t_list *head);
 
 int		sorting_ok(t_list **stack);
 void	cleanup_stack(t_list **stack);
-void	cleanup(char **s);
 void	print_error(char *msg);
 int		get_position(t_list **stack, int index);
 
