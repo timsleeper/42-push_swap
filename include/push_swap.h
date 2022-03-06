@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 22:46:54 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 16:00:42 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 16:50:36 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 }				t_list;
 
 int		ft_isdigit(int c);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 void	ft_putstr(char *str);
 
 void	validate_args(char **argv);

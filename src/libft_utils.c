@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:12:31 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 16:06:37 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 17:13:13 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,29 @@ int	ft_isdigit(int c)
 	return (c >= '0' && c <= '9');
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int	c;
-	int	s;
-	int	res;
+	long	i;
+	long	number;
+	int		sign;
 
-	c = 0;
-	s = 1;
-	res = 0;
-	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t'
-		|| str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
-		c++;
-	if (str[c] == '-' || str[c] == '+')
+	i = 0;
+	number = 0;
+	sign = 1;
+	while (str[i] && (str[i] == 32 || (str[i] >= 9 && str[i] <= 13)))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[c] == '-')
-			s = -1;
-		c++;
+		if (str[i] == '-')
+			sign = -1;
+		i++;
 	}
-	while (str[c] >= '0' && str[c] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (res * 10) + (str[c] - '0');
-		c++;
+		number = (number * 10) + (str[i] - '0');
+		i++;
 	}
-	return (res * s);
+	return (number * sign);
 }
 
 void	ft_putstr(char *str)
