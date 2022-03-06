@@ -6,7 +6,7 @@
 /*   By: ftadeu-d <ftadeu-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 23:23:50 by ftadeu-d          #+#    #+#             */
-/*   Updated: 2022/03/06 10:29:43 by ftadeu-d         ###   ########.fr       */
+/*   Updated: 2022/03/06 17:48:25 by ftadeu-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,19 @@ static void	sort_3(t_list **stack_a)
 		return ;
 	if (head->index == min && head->next->index != second)
 	{
-		ra(stack_a);
 		sa(stack_a);
+		ra(stack_a);
+	}
+	else if (head->index == second && head->next->index == min)
+		sa(stack_a);
+	else if (head->index == second && head->next->index != min)
 		rra(stack_a);
-	}
-	else if (head->index == second)
-	{
-		if (head->next->index == min)
-			sa(stack_a);
-		else
-			rra(stack_a);
-	}
+	else if (head->next->index == min)
+		ra(stack_a);
 	else
 	{
-		if (head->next->index == min)
-			ra(stack_a);
-		else
-		{
-			sa(stack_a);
-			rra(stack_a);
-		}
+		sa(stack_a);
+		rra(stack_a);
 	}
 }
 
